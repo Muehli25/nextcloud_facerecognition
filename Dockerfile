@@ -8,7 +8,7 @@ FROM nextcloud:apache as builder
 RUN apt-get update ; \
     apt-get install -y build-essential wget cmake libx11-dev libopenblas-dev
 
-ARG DLIB_BRANCH=v19.19
+ARG DLIB_BRANCH=v19.21
 RUN wget -c -q https://github.com/davisking/dlib/archive/$DLIB_BRANCH.tar.gz \
     && tar xf $DLIB_BRANCH.tar.gz \
     && mv dlib-* dlib \
